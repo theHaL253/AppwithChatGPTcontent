@@ -9,10 +9,11 @@ import Discord from "/public/assets/social_discord.png";
 type Props = {
     isDark?: boolean;
 }
-
+{/* SocialLinks is a components while {isDark} is a property inside*/}
 const SocialLinks = ({ isDark = false }: Props) => {
   return (
     <div className='flex justify-between items-center gap-7'>
+        {/* href is for the link, target is for directing the link into new blank page, while we still standing at the current page, rel is standing for the relationship word, noreferrer means no content reference from this page to twitter link */}
         <a href='https://twitter.com' target='blank' rel='noreferrer'>
             <Image
                 className={`${isDark ? "brightness-0": ""} hover:opacity-50`}
