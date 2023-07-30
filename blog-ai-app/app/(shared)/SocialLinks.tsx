@@ -9,7 +9,8 @@ import Discord from "/public/assets/social_discord.png";
 type Props = {
     isDark?: boolean;
 }
-{/* SocialLinks is a components while {isDark} is a property inside*/}
+{/* SocialLinks is a components while {isDark} is a property inside
+    We pass the value of isDark as false, so when that isDark false, it will add the feature "" to the component in line 20. Otherwise, it will add the value of brightness-0*/}
 const SocialLinks = ({ isDark = false }: Props) => {
   return (
     <div className='flex justify-between items-center gap-7'>
