@@ -4,6 +4,14 @@ import Travel from "app/(home)/Travel";
 import Other from "app/(shared)/Other";
 import Subscribe from "app/(shared)/Subscribe"
 import Sidebar from "app/(shared)/Sidebar";
+import { prisma } from "app/api/client";
+
+const getPosts = async () => {
+  const posts = await prisma.post.findMany();
+
+  return posts;
+}
+
 
 export default function Home() {
   return (
