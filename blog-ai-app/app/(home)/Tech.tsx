@@ -1,9 +1,12 @@
 import React from 'react'
 import Card from 'app/(shared)/Card'
+import { Post } from '@prisma/client';
 
-type Props = {}
+type Props = {
+  techPosts: Array<Post>;
+}
 
-const Tech = (props: Props) => {
+const Tech = ({techPosts}: Props) => {
   return (
     <section>
         <hr className='border-1'/>
