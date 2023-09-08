@@ -8,7 +8,7 @@ let prismaInit: PrismaClient;
 if (process.env.NODE_ENV === "production"){
     prismaInit = new PrismaClient();
 } else {
-    // This is to access the prisma property of any global objects or variable (which is not stricted to any data types)
+    // This is to access the prisma property of any global objects or variable (which is not strict to any data types)
     if (!(global as any).prisma) {
         (global as any).prisma = new PrismaClient();
     }

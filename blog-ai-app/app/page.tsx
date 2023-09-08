@@ -11,7 +11,7 @@ export const revalidate = 60;
 
 const getPosts = async () => {
   const posts = await prisma.post.findMany();
-
+  // This function is to format all the images into static asset, to import into the Image tag(because the placeholder variable requires this kind of format)
   const formattedPosts = await Promise.all(
     posts.map(async (post: Post) => {
       const imageModule = require(`../public${post.image}`);

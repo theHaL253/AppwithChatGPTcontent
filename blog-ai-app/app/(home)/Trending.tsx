@@ -7,7 +7,7 @@ type TrendingCardProps = {
   className?: string;
   post: Post;
 };
-
+// TrendingCard function is to handle the layout of each post: title, category, link
 const TrendingCard = ({ className, post }: TrendingCardProps) => {
   return (
     <Link
@@ -16,6 +16,7 @@ const TrendingCard = ({ className, post }: TrendingCardProps) => {
     >
       <div className="z-0 relative w-full h-full">
         <Image
+        // fill is to make the image fulfil the size of parent div
           fill
           alt="tech"
           placeholder="blur"
@@ -24,6 +25,7 @@ const TrendingCard = ({ className, post }: TrendingCardProps) => {
                 (max-width: 768px) 75vw,
                 (max-width: 1060px) 50vw,
                 33vw"
+          // This is to keep the image ratio, preserve the size of the div
           style={{ objectFit: "cover" }}
         />
       </div>
@@ -42,6 +44,7 @@ type Props = {
   trendingPosts: Array<Post>;
 };
 
+// Trending function is to handle the content, everything inside the post
 const Trending = ({ trendingPosts }: Props) => {
   return (
     <section className="pt-3 pb-10">
